@@ -1,0 +1,514 @@
+html,body{
+	height: 100%;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+.loding{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+}
+.pic{
+	width: 3.413333rem;
+	height: 0.426667rem;
+	background-image: url(../img/30.gif);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	position: absolute;
+	top: 0;left: 0;bottom: 0;right: 0;margin: auto;
+	
+}
+/*第一页*/
+.page_one{
+	position: relative;
+	top: 9%;
+	width: 100%;
+	height: 15.5rem;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	/*display: none;*/
+	
+}
+.bgcolor{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+
+.HomePageImg>img:nth-child(1){
+	position: absolute;
+	left: 88%;
+   	top: 4%;
+   	width: 0.773333rem;
+   	height: 0.773333rem;
+   	animation: yuan 1.5s infinite linear; 
+}
+@keyframes yuan {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.HomePageImg>img:nth-child(2){
+	position: absolute;
+	left: 88%;
+   	top: 4%;
+   	width: 0.773333rem;
+   	height: 0.773333rem;
+   	display: none;
+}
+.heart{
+	position: absolute;
+	top: 3%;
+	left: 50%;
+	width: 1.866667rem;
+	height: 8.0rem;
+	margin-left: -0.933333rem;
+}
+.startGame{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 2.16rem;
+	height: 0.893333rem;
+	margin-left: -0.933333rem;
+}
+
+.xinlizui{
+	position: absolute;
+	top: 110%;
+	left: 50%;
+	width: 2.0rem;
+	height: 2.0rem;
+	margin-left: -1.0rem;
+}
+.bigyun{
+	position: absolute;
+	top: 85%;
+	left: -100%;
+	width: 6.733333rem;
+	height: 6.32rem;
+	animation: bigyun 8.5s ease-in ; 
+}
+@keyframes bigyun {
+	0%{
+		transform: rotate(0deg);
+		left: -100%;
+
+	}
+	100%{
+		transform: rotate(360deg);
+		left: 100%;
+
+	}
+}
+
+.smallyun{
+	position: absolute;
+	top: 90%;
+	left: -35%;
+	width: 3.573333rem;
+	height: 3.16rem;
+	animation: smallyun 8s ease-in; 
+}
+@keyframes smallyun {
+	0%{
+		transform: rotate(0deg);
+		left: -35%;
+	}
+	100%{
+		transform: rotate(360deg);
+		left: 100%;
+	}
+}
+.vertical_clouds{
+	position: absolute;
+	top: -30%;
+	left: -12%;
+	width: 3.573333rem;
+	height: 3.16rem;
+	animation: vertical 12s ease-in;
+}
+@keyframes vertical {
+	0%{
+		transform: rotate(0deg);
+		top: -30%;
+	}
+	100%{
+		transform: rotate(360deg);
+		top: 105%;
+	}
+}
+.vertical_clouds2{
+	position: absolute;
+	top: -30%;
+	left: 78%;
+	width: 3.573333rem;
+	height: 3.16rem;
+	animation: verticaltwo 14s ease-in;
+}
+@keyframes verticaltwo {
+	0%{
+		transform: rotate(0deg);
+		top: -30%;
+	}
+	100%{
+		transform: rotate(360deg);
+		top: 105%;
+	}
+}
+
+
+
+
+
+
+
+.dian{
+	position: absolute;
+	width: 0.44rem;
+	height: 0.626667rem;
+	animation: dian 8s ease-in infinite; 
+}
+@keyframes dian {
+	0%{
+		transform: rotate(0deg);
+		left: 100%;
+		top: 90%;
+	}
+	100%{
+		transform: rotate(360deg);
+		left: 0%;
+		top: 60%;
+	}
+}
+.dianOne{
+	position: absolute;
+	width: 0.44rem;
+	height: 0.626667rem;
+	animation: dianOne 15s ease-in infinite; 
+}
+@keyframes dianOne {
+	0%{
+		transform: rotate(0deg);
+		left: 0%;
+		top: 70%;
+	}
+	100%{
+		transform: rotate(360deg);
+		left: 100%;
+		top:10%;
+	}
+}
+.dianTwo{
+	position: absolute;
+	width: 0.44rem;
+	height: 0.626667rem;
+	animation: dianTwo 12s ease-in infinite; 
+}
+@keyframes dianTwo {
+	0%{
+		transform: rotate(0deg);
+		left: 100%;
+		top: 30%;
+	}
+	100%{
+		transform: rotate(360deg);
+		left: 0%;
+		top: 20%;
+	}
+}
+
+/*第二页*/
+.page_two{
+	position: absolute;
+	top: 9%;
+	width: 100%;
+	height: 15.5rem;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	display: none;
+	
+}
+
+.content{
+	position: absolute;
+	width: 7.906667rem;
+	height: 2.453333rem;
+	top:2%;
+	left: 50%;
+	margin-left: -3.96rem;
+	animation: zoomInUp 1.5s ease-in;
+
+}
+.remenber{
+	position: absolute;
+	width: 3.133333rem;
+	height: 0.893333rem;
+	top:110%;
+	left: 50%;
+	margin-left: -1.573333rem;
+}
+
+
+.above{
+	position: absolute;
+	width: 7.373333rem;
+	height: 7.706667rem;
+	top:20%;
+	left: 50%;
+	margin-left: -3.693333rem;
+	
+}
+
+
+
+
+/*第三页*/
+.page_three{
+	position: absolute;
+	top: 9%;
+	width: 100%;
+	height: 15.5rem;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	display: none;
+	
+}
+.aboveThree{
+	position: absolute;
+	width: 7.373333rem;
+	height: 7.706667rem;
+	top:20%;
+	left: 50%;
+	margin-left: -3.693333rem;
+	
+}
+
+.remenberTwo{
+	position: absolute;
+	width: 3.133333rem;
+	height: 0.893333rem;
+	top:110%;
+	left: 50%;
+	margin-left: -1.573333rem;
+}
+/*第四页*/
+.page_four{
+	position: absolute;
+	top: 9%;
+	width: 100%;
+	height: 15.5rem;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	display: none;
+	
+}
+.remenberfour{
+	position: absolute;
+	width: 3.133333rem;
+	height: 0.893333rem;
+	top:110%;
+	left: 50%;
+	margin-left: -1.573333rem;
+}
+
+.abovefour{
+	position: absolute;
+	width: 7.373333rem;
+	height: 7.706667rem;
+	top:20%;
+	left: 50%;
+	margin-left: -3.693333rem;
+}
+/*第五页*/
+.page_five{
+	position: absolute;
+	top: 9%;
+	width: 100%;
+	height: 15.5rem;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	display: none;
+	
+}
+.remenberfive{
+	position: absolute;
+	width: 3.133333rem;
+	height: 0.893333rem;
+	top:110%;
+	left: 50%;
+	margin-left: -1.573333rem;
+}
+
+.abovefive{
+	position: absolute;
+	width: 7.373333rem;
+	height: 7.706667rem;
+	top:20%;
+	left: 50%;
+	margin-left: -3.693333rem;
+}
+/*第六页*/
+.page_six{
+	position: absolute;
+	top: 9%;
+	width: 100%;
+	height: 15.5rem;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	display: none;
+	
+}
+.answer{
+	position: absolute;
+	top:30%;
+	left: 50%;
+	margin-left: -2.52rem;
+	width: 5.04rem;
+	height: 0.506667rem;
+	animation: zoomInDown 0.5s  linear;
+}
+.yes{
+	position: absolute;
+	top:70%;
+	left: 50%;
+	width: 2.186667rem;
+	height:0.893333rem;
+	margin-left: -7.5rem;
+}
+.no{
+	position: absolute;
+	top:70%;
+	left: 50%;
+	width: 2.186667rem;
+	height:0.893333rem;
+	margin-left: 5rem;
+}
+
+.abovesix{
+	position: absolute;
+	width: 6.906667rem;
+	height:2.933333rem;
+	top:40%;
+	left: 50%;
+	margin-left: -3.52rem;
+}
+
+/*第七页*/
+.page_seven{
+	position: absolute;
+	top: 9%;
+	width: 100%;
+	height: 15.5rem;
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat ;
+	background-size: cover;
+	display: none;
+
+}
+.psychologicalCrime{
+	position: absolute;
+	top:10%;
+	left: 50%;
+	width: 2.8rem;
+	height:2.933333rem;
+	margin-left: -1.4rem;
+	
+}
+.festival{
+	position: absolute;
+	top:30%;
+	left: 50%;
+	width: 7.733333rem;
+	height:1.2rem;
+	margin-left: -3.866667rem;
+	
+}
+.challengeAgain{
+	position: absolute;
+	top:40%;
+	left: 50%;
+	width: 4.4rem;
+	height:1.253333rem;
+	margin-left: -2.2rem;
+	
+}
+
+.tellYouFriends{
+	position: absolute;
+	top:55%;
+	left: 50%;
+	width: 2.186667rem;
+	height:0.893333rem;
+	margin-left: -1.093333rem;
+}
+
+.konwMore{
+	position: absolute;
+	top:65%;
+	left: 50%;
+	width: 2.186667rem;
+	height:0.893333rem;
+	margin-left: -1.093333rem;
+}
+.release{
+	position: absolute;
+	top:80%;
+	left: 50%;
+	width: 3.52rem;
+	height:0.533333rem;
+	margin-left: -1.76rem;
+}
+
+.LetFriends{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin:auto;
+	width: 100%;
+	height:100%;
+	z-index: 100;
+	display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

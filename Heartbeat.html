@@ -1,0 +1,713 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>骚年！敢玩心吗？</title>
+    <style type="text/css"></style>
+   	<link rel="stylesheet" type="text/css" href="css/Heartbeat.css"/>
+   	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<script type="text/javascript" src="build/flexible.debug.js"></script>
+	<script type="text/javascript" src="build/flexible_css.debug.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="loding">
+		<div class="pic">	
+		</div>
+	</div>
+	<div class="container">
+		<div class="HomePageImg">
+			<img class="music_start" src="img/music_satrt.png">
+			<img class="music_end" src="img/music_end.png"/>
+			<audio src="music/bg.mp3" id="audio" autoplay="autoplay" loop="loop"></audio>
+			<audio src="music/music1.mp3" id="audio1"></audio>
+			<audio src="music/music3.mp3" id="audio3"></audio>	
+		</div>
+		<div class="page_one">
+			<div class="bgcolors"></div>
+			<img src="img/strat.png" class="startGame" />
+			<img src="img/name.png" class="xinlizui" />
+			<img src="img/yun1.png" class="bigyun"/>
+			<img src="img/yun.png" class="smallyun" />
+			<img src="img/100.png" class="dian"/>
+			<img src="img/100.png" class="dianOne"/>
+			<img src="img/100.png" class="dianTwo"/>
+			<img src="img/yun.png" class="vertical_clouds" />
+
+
+		</div>
+		<div class="page_two">
+			<img src="img/content2.png" class="content" />
+			<img src="img/remenber.png" class="remenber" />
+			<img src="img/yun1.png" class="bigyun"/>
+			<img src="img/yun.png" class="smallyun" />
+			<img src="img/100.png" class="dian"/>
+			<img src="img/100.png" class="dianOne"/>
+			<img src="img/100.png" class="dianTwo"/>
+			<img src="img/yun.png" class="vertical_clouds2" />
+		</div>
+		<div class="page_three">
+			<img src="img/content.png" class="content" />
+			<img src="img/remenber.png" class="remenberTwo" />
+			<img src="img/yun1.png" class="bigyun"/>
+			<img src="img/yun.png" class="smallyun" />
+			<img src="img/100.png" class="dian"/>
+			<img src="img/100.png" class="dianOne"/>
+			<img src="img/100.png" class="dianTwo"/>
+			<img src="img/yun1.png" class="vertical_clouds" />
+		</div>
+		<div class="page_four">
+			<img src="img/content1.png" class="content" />
+			<img src="img/remenber.png" class="remenberfour" />
+			<img src="img/yun1.png" class="bigyun"/>
+			<img src="img/yun.png" class="smallyun" />
+			<img src="img/100.png" class="dian"/>
+			<img src="img/100.png" class="dianOne"/>
+			<img src="img/100.png" class="dianTwo"/>
+			<img src="img/yun.png" class="vertical_clouds2" />
+
+		
+		</div>
+		<div class="page_five">
+			<img src="img/content3.png" class="content" />
+			<img src="img/remenber.png" class="remenberfive" />
+			<img src="img/yun1.png" class="bigyun"/>
+			<img src="img/yun.png" class="smallyun" />
+			<img src="img/100.png" class="dian"/>
+			<img src="img/100.png" class="dianOne"/>
+			<img src="img/100.png" class="dianTwo"/>
+			<img src="img/yun1.png" class="vertical_clouds" />
+		</div>
+		<div class="page_six">
+			<img src="img/answer.png" class="answer" />
+			<img src="img/yes.png" class="yes" />
+			<img src="img/no.png" class="no" />	
+			<img src="img/yun1.png" class="bigyun"/>
+			<img src="img/yun.png" class="smallyun" />
+			<img src="img/100.png" class="dian"/>
+			<img src="img/100.png" class="dianOne"/>
+			<img src="img/100.png" class="dianTwo"/>
+			<img src="img/yun1.png" class="vertical_clouds2" />
+		</div>
+		<div class="page_seven">
+			<img src="img/psychologicalCrime.png" class="psychologicalCrime" />
+			<img src="img/festival.png" class="festival" />
+			<img src="img/challengeAgain.png" class="challengeAgain" />	
+			<img src="img/tt.png" class="tellYouFriends" />	
+			<img src="img/konwMore.png" class="konwMore" />	
+			<img src="img/release.png" class="release" />
+			<img src="img/LetFriends.png" class="LetFriends">
+			<img src="img/yun1.png" class="vertical_clouds" />
+			<img src="img/yun1.png" class="vertical_clouds2" />
+			<img src="img/100.png" class="dian"/>
+			<img src="img/100.png" class="dianOne"/>
+			<img src="img/100.png" class="dianTwo"/>	
+
+		</div>
+	</div>
+
+    
+
+
+    
+</body>
+<script type="text/javascript">
+	$('.music_start').click(function() {
+		$('.music_start').css("display","none");
+		$('.music_end').css("display","block");	
+		var audio = $("#audio")[0];  
+		audio.pause();  
+	});
+	$('.music_end').click(function() {
+		$('.music_start').css("display","block");
+		$('.music_end').css("display","none");
+		var audio = $("#audio")[0];   
+		audio.play(); 	
+	});
+	//页面加载
+	document.onreadystatechange= function(){
+		if(document.readyState == "complete") {
+			$(".loding").hide();			
+			heartStart();
+			heartPageBgcolors();
+			$(".startGame").animate({"top":"60%",},2000,"linear",function(){
+				
+			});
+			$(".xinlizui").animate({"top":"70%",},2500,"linear"); 
+			
+		}
+		
+	}
+	// 开始文字显示
+	var timer;
+	function heartStart() {
+		var num = 0;
+		timer = setInterval(function(){
+			num++;
+			if(num < 21) {
+				var img = $('<img src="img/0' + num +'.png" class="heart heart_'+num+'" />');
+				if($(".heart_"+(num-1))!=undefined){
+					$(".heart_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_one"));
+				
+			}else if( num > 21) {
+				$(".heart_"+20).remove();
+				clearInterval(timer);
+				img2 = $('<img src="img/heart2.png" class="heart"/>');
+				img2.appendTo($(".page_one"));
+				heartPageOne();
+			}	
+		},30);
+	}
+	// 文字在页面闪烁
+	var a;
+	function heartPageOne() {
+		var num = 0;
+		a = setInterval(function(){
+			num++;
+			if(num < 15) {
+				var img = $('<img src="img/heart' + num +'.png" class="heart heart_'+num+'" />');
+				if($(".heart_"+(num-1))!=undefined){
+					$(".heart_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_one"));
+				
+			}else if( num > 14) {
+				$(".heart_"+14).remove();
+				num=0;
+			}
+			
+		},100);
+	}
+
+//背景图片快速切换 
+	var b;
+	function heartPageBgcolors() {
+		var num = 0;
+		b = setInterval(function(){
+			num++;
+			if(num < 21) {
+				var imgbgcolor = $('<img src="img/bg0' + num +'.jpg" class="bgcolor bgcolor_'+num+'" />');
+				if($(".bgcolor_"+(num-1))!=undefined){
+					$(".bgcolor_"+(num-1)).remove();
+				}
+				imgbgcolor.appendTo($(".bgcolors"));
+				
+			}else if( num > 21) {
+				$(".bgcolor_"+20).remove();
+				num=2;
+			}
+			
+		},100);
+	}
+
+
+
+//点击提交执行跳转 以及之后的动画
+
+	$(".startGame").click(function() {
+		clearInterval(a);
+		clearInterval(b);
+		var audio = $("#audio1")[0]; 
+		audio.play();
+		$(".startGame").animate({
+			"top":"110%",
+		},900,"linear",function(){
+			$('.page_one').hide();
+			$('.page_two').show();
+			var audio = $("#audio3")[0]; 
+			audio.play();
+			heartPageTwoStart();
+			
+		});
+		$(".xinlizui").animate({"top":"110%",},800,"linear"); 
+		
+	});
+
+// 操作第二页面的文字加载	
+
+	var timerTwo;
+	function heartPageTwoStart() {
+		var number = 0;
+		timerTwo = setInterval(function(){
+			number++;
+			if(number < 18) {
+				var img = $('<img src="img/pageTwoImg0' + number + '.png" class="above above_'+number+'" />');
+				if($(".above_"+(number-1)) != undefined){
+					$(".above_"+(number-1)).remove();
+				}
+				img.appendTo($(".page_two"));
+				
+			}else if( number > 17) {
+				$(".above_"+17).remove();
+				clearInterval(timerTwo);
+				img2 = $('<img src="img/001.png" class="above"/>');
+				img2.appendTo($(".page_two"));
+				$(".remenber").animate({
+					"top":"75%",
+				},1500,"linear",function(){
+					//点击音乐
+					heartPageTwo();
+					
+				});
+				
+			}	
+		},30);
+	}
+	// 第二文字在页面闪烁
+	var aTwo;
+	function heartPageTwo() {
+		var num = 0;
+		aTwo = setInterval(function(){
+			num++;
+			if(num < 13) {
+				var img = $('<img src="img/00' + num +'.png" class="above above_'+num+'" />');
+				if($(".above_"+(num-1))!=undefined){
+					$(".above_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_two"));
+				
+			}else if( num > 12) {
+				$(".above_"+12).remove();
+				num=0;
+			}
+			
+		},150);
+	}
+	
+	//点击第二页继续按钮执行下一页所有操作
+	//清除第二页所有定时器
+	
+	$(".remenber").click(function() {
+		clearInterval(aTwo);
+		clearInterval(b);
+		var audio = $("#audio1")[0]; 
+		audio.play();
+		$(".remenber").animate({
+			"top":"110%",
+		},600,"linear",function(){
+			$('.page_two').hide();
+			$('.page_three').show();
+			heartPageThreeStart();
+		});
+		$(".xinlizui").animate({"top":"70%",},4000,"linear");
+
+	});
+	
+	// 操作第三页面的文字加载
+	var timerthree;
+	function heartPageThreeStart() {
+		var number = 0;
+		timerthree = setInterval(function(){
+			number++;
+			if(number < 18) {
+				var img = $('<img src="img/remenberTwo0' + number + '.png" class="aboveThree aboveThree_'+number+'" />');
+				if($(".aboveThreee_"+(number-1)) != undefined){
+					$(".aboveThree_"+(number-1)).remove();
+				}
+				img.appendTo($(".page_three"));
+				
+			}else if( number > 17) {
+				$(".aboveThree_"+17).remove();
+				clearInterval(timerthree);
+				img2 = $('<img src="img/remenberTwo017.png" class="aboveThree"/>');
+				img2.appendTo($(".page_three"));
+				$(".remenberTwo").animate({
+					"top":"75%",
+				},1500,"linear",function(){
+					//点击音乐
+					heartPageThree();
+					
+				});
+				
+			}	
+		},30);
+	}
+
+// 第三页文字在页面闪烁
+	var athree;
+	function heartPageThree() {
+		var num = 0;
+		athree = setInterval(function(){
+			num++;
+			if(num < 16) {
+				var img = $('<img src="img/remenberTwo00' + num +'.png" class="aboveThree aboveThree_'+num+'" />');
+				if($(".aboveThree_"+(num-1))!=undefined){
+					$(".aboveThree_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_three"));
+				
+			}else if( num > 15) {
+				$(".aboveThree_"+15).remove();
+				num=0;
+			}
+			
+		},150);
+	}
+
+	//点击第三页继续按钮执行下一页所有操作
+	//清除第三页所有定时器
+
+	$(".remenberTwo").click(function() {
+		clearInterval(athree);
+		var audio = $("#audio1")[0]; 
+		audio.play();
+		$(".remenberTwo").animate({
+			"top":"110%",
+		},600,"linear",function(){
+			$('.page_three').hide();
+			$('.page_four').show();
+			heartPageFourStart();
+		// 动画执行完后执行第四页文字闪烁
+
+
+		});
+
+	});
+	// 操作第四页面的文字加载
+	var timerfour;
+	function heartPageFourStart() {
+		var number = 0;
+		timerfour = setInterval(function(){
+			number++;
+			if(number < 18) {
+				var img = $('<img src="img/remenberfour0' + number + '.png" class="abovefour abovefour_'+number+'" />');
+				if($(".abovefour_"+(number-1)) != undefined){
+					$(".abovefour_"+(number-1)).remove();
+				}
+				img.appendTo($(".page_four"));
+				
+			}else if( number > 17) {
+				$(".abovefour_"+17).remove();
+				clearInterval(timerfour);
+				img2 = $('<img src="img/remenberfour017.png" class="abovefour"/>');
+				img2.appendTo($(".page_four"));
+				$(".remenberfour").animate({
+					"top":"75%",
+				},1500,"linear",function(){
+					//点击音乐
+					
+					heartPageFour();
+				});
+				
+			}	
+		},30);
+	};
+
+
+	// 第四页文字在页面闪烁
+	var afour;
+	function heartPageFour() {
+		var num = 0;
+		afour = setInterval(function(){
+			num++;
+			if(num < 16) {
+				var img = $('<img src="img/remenberfour00' + num +'.png" class="abovefour abovefour_'+num+'" />');
+				if($(".abovefour_"+(num-1))!=undefined){
+					$(".abovefour_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_four"));
+				
+			}else if( num > 15) {
+				$(".abovefour_"+15).remove();
+				num=0;
+			}
+			
+		},150);
+	}
+
+	//点击第三页继续按钮执行下一页所有操作
+	//清除第三页所有定时器
+
+	$(".remenberfour").click(function() {
+		clearInterval(afour);
+		var audio = $("#audio1")[0]; 
+		audio.play();
+		$(".remenberfour").animate({
+			"top":"75%",
+		},600,"linear",function(){
+			$('.page_four').hide();
+			$('.page_five').show();
+
+		// 动画执行完后执行第五页文字闪烁
+		heartPageFiveStart() ;
+
+
+		});
+
+	});
+
+	// 操作第五页面的文字加载
+	var timerfive;
+	function heartPageFiveStart() {
+		var number = 0;
+		timerfive = setInterval(function(){
+			number++;
+			if(number < 17) {
+				var img = $('<img src="img/remenberfive0' + number + '.png" class="abovefive abovefive_'+number+'" />');
+				if($(".abovefive_"+(number-1)) != undefined){
+					$(".abovefive_"+(number-1)).remove();
+				}
+				img.appendTo($(".page_five"));
+				
+			}else if( number > 16) {
+				$(".abovefive_"+16).remove();
+				clearInterval(timerfive);
+				img2 = $('<img src="img/remenberfive0015.png" class="abovefive"/>');
+				img2.appendTo($(".page_five"));
+				$(".remenberfive").animate({
+					"top":"75%",
+				},1500,"linear",function(){
+					//点击音乐
+					
+					heartPageFive();
+				});
+				
+			}	
+		},30);
+
+	};
+
+	// 第五页文字在页面闪烁
+
+	var afive;
+	function heartPageFive() {
+		var num = 0;
+		afive = setInterval(function(){
+			num++;
+			if(num < 16) {
+				var img = $('<img src="img/remenberfive00' + num +'.png" class="abovefive abovefive_'+num+'" />');
+				if($(".abovefive_"+(num-1))!=undefined){
+					$(".abovefive_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_five"));
+				
+			}else if( num > 15) {
+				$(".abovefive_"+15).remove();
+				num=0;
+			}
+			
+		},150);
+	}
+
+	//点击第四页继续按钮执行下一页所有操作
+	//清除第四页所有定时器
+
+	$(".remenberfive").click(function() {
+		clearInterval(afive);
+		var audio = $("#audio1")[0]; 
+		audio.play();
+		$(".remenberfive").animate({
+			"top":"75%",
+		},600,"linear",function(){
+			$('.page_five').hide();
+			$('.page_six').show();
+
+		// 动画执行完后执行第六页文字闪烁
+		heartPageSixStart();
+
+		});
+
+	});
+	// 操作第六页面的文字加载
+	var timersix;
+	function heartPageSixStart() {
+		var number = 0;
+		timersix = setInterval(function(){
+			number++;
+			if(number < 34) {
+				var img = $('<img src="img/sunflower0' + number + '.png" class="abovesix abovesix_'+number+'" />');
+				if($(".abovesix_"+(number-1)) != undefined){
+					$(".abovesix_"+(number-1)).remove();
+				}
+				img.appendTo($(".page_six"));
+				
+			}else if( number > 33) {
+				$(".abovesix_"+33).remove();
+				clearInterval(timersix);
+				img2 = $('<img src="img/sunflower033.png" class="abovesix"/>');
+				img2.appendTo($(".page_six"));
+				$(".yes").animate({
+					"margin-left":"-3rem",
+				},1500,"linear",function(){
+					//点击音乐
+					
+					
+				});
+				$(".no").animate({
+					"margin-left":"1rem",
+				},1500,"linear",function(){
+					//点击音乐
+					heartPageSix();
+					
+				});
+				
+			}	
+		},40);
+
+	};
+	
+	// 第六页文字在页面闪烁
+
+	var asix;
+	function heartPageSix() {
+		var num = 0;
+		asix = setInterval(function(){
+			num++;
+			if(num < 15) {
+				var img = $('<img src="img/sunflower00' + num +'.png" class="abovesix abovesix_'+num+'" />');
+				if($(".abovesix_"+(num-1))!=undefined){
+					$(".abovesix_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_six"));
+				
+			}else if( num > 14) {
+				$(".abovesix_"+14).remove();
+				num=0;
+			}
+			
+		},150);
+	}
+	//点击第六页继续按钮执行下一页所有操作
+	//清除第六页所有定时器
+	
+	$(".yes,.no").click(function() {
+		clearInterval(asix);
+		var audio = $("#audio1")[0]; 
+		audio.play();
+		$(".yes").animate({
+			"margin-left":"-7.5rem",
+		},600,"linear",function(){
+			$('.page_six').hide();
+			$('.page_seven').show();
+		// 动画执行完后执行第六页文字闪烁
+		});
+		$(".no").animate({
+			"margin-left":"5rem",
+		},600,"linear",function(){
+			$('.page_six').hide();
+			$('.page_seven').show();
+			endding();
+		});
+	});	
+function endding(){
+
+				var timert = setTimeout(function() {
+					var arr = [];
+					for(var i = 0;i < 2;i++) {
+						var random = Math.floor(Math.random()*4);
+						for(var k = 0 ; k <i ;k++){
+							if (arr [k] == random){
+								break;
+							}
+						}
+						if (k == i) {
+							arr[i]=random;
+						}else{
+							i--;
+						}
+					}
+
+					for(i = 0 ; i <arr.length ; i++){
+						if(arr[i]==1){
+							heartPageSevenCrime();
+						}
+						if(arr[i]==2){
+							heartPageSevenFestival();
+						}
+						if(arr[i]==3){
+							heartPageSevenChallengeAgain();
+						}
+					}
+					
+					clearTimeout(timert);
+					setTimeout(function(){
+						endding();
+					},4000)
+				},30);
+				}
+
+
+	
+// 1 心理罪
+	var tell;
+	function heartPageSevenCrime() {
+		var num = 0;
+		tell = setInterval(function(){
+			num++;
+			if(num < 6) {
+				var img = $('<img src="img/psychologicalCrime0' + num +'.png" class="psychologicalCrime psychologicalCrime_'+num+'" />');
+				if($(".psychologicalCrime_"+(num-1))!=undefined){
+					$(".psychologicalCrime_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_seven"));
+				
+			}else if( num > 5) {
+				$(".psychologicalCrime_"+5).remove();
+				num=0;
+				clearInterval(tell);
+			}
+			
+		},300);
+	}
+
+// 2 6.18上海电影节发布会
+	var fest;
+	function heartPageSevenFestival() {
+		var num = 0;
+		fest = setInterval(function(){
+			num++;
+			if(num < 10) {
+				var img = $('<img src="img/festival0' + num +'.png" class="festival festival_'+num+'" />');
+				if($(".festival_"+(num-1))!=undefined){
+					$(".festival_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_seven"));
+				
+			}else if( num > 10) {
+				$(".festival_"+9).remove();
+				num=0;
+				clearInterval(fest);
+			}
+			
+		},300);
+	}
+
+
+// 3 再来挑战
+
+	var Again;
+	function heartPageSevenChallengeAgain() {
+		var num = 0;
+		Again = setInterval(function(){
+			num++;
+			if(num < 10) {
+				var img = $('<img src="img/challengeAgain0' + num +'.png" class="challengeAgain challengeAgain_'+num+'" />');
+				if($(".challengeAgain_"+(num-1))!=undefined){
+					$(".challengeAgain_"+(num-1)).remove();
+				}
+				img.appendTo($(".page_seven"));
+				
+			}else if( num > 10) {
+				$(".challengeAgain_"+9).remove();
+				num=0;
+				clearInterval(Again);
+			}
+			
+		},300);
+	}
+
+// 点击告诉朋友
+$('.tellYouFriends').click(function() {
+	$('.LetFriends').show();
+})
+$('.LetFriends').click(function() {
+	$('.LetFriends').hide();
+})
+	
+
+
+	
+</script>
+</html>
